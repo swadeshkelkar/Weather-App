@@ -24,6 +24,17 @@ submitButton.addEventListener('click', () => {
     
 });
 
+searchInputBox.addEventListener('keypress', (event) =>{
+
+    if(event.keyCode == 13) {
+        console.log(searchInputBox.value);
+        getWeatherReport(searchInputBox.value);
+        getWeatherForecast(searchInputBox.value);
+        // document.querySelector('.weather-body').style.display = 'block';
+        // document.querySelector('.more').style.display = 'block';
+    }
+});
+
 // Get Weather Report
 function getWeatherReport(city) {
     fetch(`${weatherApi.baseUrlR}?q=${city}&appid=${weatherApi.key}&units=metric`)
