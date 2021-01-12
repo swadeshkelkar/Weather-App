@@ -27,11 +27,8 @@ submitButton.addEventListener('click', () => {
 searchInputBox.addEventListener('keypress', (event) =>{
 
     if(event.keyCode == 13) {
-        console.log(searchInputBox.value);
         getWeatherReport(searchInputBox.value);
         getWeatherForecast(searchInputBox.value);
-        // document.querySelector('.weather-body').style.display = 'block';
-        // document.querySelector('.more').style.display = 'block';
     }
 });
 
@@ -57,7 +54,6 @@ function getWeatherForecast(city) {
 function showWeatherReport(weather) {
     
     try {
-        console.log(weather);
         const city = document.getElementById('city');
         city.innerHTML = `${weather.name}, ${weather.sys.country}`;
         
@@ -91,7 +87,6 @@ function showWeatherReport(weather) {
         
         const date = document.getElementById('date');
         const todayDate = new Date();
-        console.log(todayDate);
         date.innerText = dateManage(todayDate);
     } catch (error) {
         document.querySelector('.error').style.display = 'flex';
@@ -102,8 +97,6 @@ function showWeatherReport(weather) {
 // Show Weather Forecast
 function showWeatherForecast(weather) {
     try {
-        console.log(weather);
-
         for (let i = 1; i < 5; i++) {
         
             const time = `${weather.list[i].dt_txt}`;
