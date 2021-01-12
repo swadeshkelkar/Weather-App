@@ -29,6 +29,7 @@ searchInputBox.addEventListener('keypress', (event) =>{
     if(event.keyCode == 13) {
         getWeatherReport(searchInputBox.value);
         getWeatherForecast(searchInputBox.value);
+        clearSearch();
     }
 });
 
