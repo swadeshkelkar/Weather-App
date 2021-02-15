@@ -107,7 +107,7 @@ function showWeatherReport(weather) {
         const typeOfWeather = `${weather.weather[0].description}`;
         
         const imgDOM = document.getElementById('img-weather');
-        imgDOM.src = "/svgs/"+ typeOfWeather + '.svg';
+        imgDOM.src = "./svgs/"+ typeOfWeather + '.svg';
         
         
         document.getElementById('wind').innerHTML = `Wind: ${weather.wind.speed} km/hr`;
@@ -146,7 +146,7 @@ async function showWeatherForecast(weather) {
             document.getElementById('forecast-' + i).innerHTML = hour + '<br>' + des;
 
             const imgFDOM = document.getElementById('forecast-image-' + i);
-            imgFDOM.src = "/svgs/"+des + '.svg';
+            imgFDOM.src = "./svgs/"+des + '.svg';
         }
     }
     catch(error) {
