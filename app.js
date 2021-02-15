@@ -78,8 +78,8 @@ function showWeatherReport(weather) {
         function showTime(time) {
             const dateTime = document.getElementById('date');
             // console.log(time)
-            // const date = time.date_time_wti.slice(0, 17);
-            const date = time.date_time
+            const date = time.date_time_wti.slice(0, 17);
+            // const date = time.date_time
 
             // console.log(time.date_time_wti);
             const cTime = moment(time.date_time).format('h:mm A');
